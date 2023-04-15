@@ -21,6 +21,7 @@ public class FalseSharingTest {
         });
         t1.start();
         t2.start();
+        //当前线程挂起等待其他线程执行完
         t1.join();
         t2.join();
         System.out.println(pointer.x + "," + pointer.y);
